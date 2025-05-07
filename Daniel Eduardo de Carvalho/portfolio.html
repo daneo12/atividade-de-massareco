@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="font-['Plus_Jakarta_Sans']">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Eduardo - Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'Plus_Jakarta_Sans': ['"Plus Jakarta Sans"', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            light: '#DC143C',
+                            dark: '#FF6B81'
+                        }
+                    },
+                    keyframes: {
+                        'fade-in': {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        'slide-up': {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fade-in 0.5s ease-out',
+                        'slide-up': 'slide-up 0.5s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body{
+            background-color: #1D3853;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head> 
+    <header class="fixed w-full bg-[#F2FAFE] dark:bg-[#1D3853] backdrop-blur-sm z-50 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <img src="logo.svg" alt="" style="width: 56px; height: 56px;"> 
+           
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="nav-link relative text-gray-700 hover:text-[#03805E] dark:text-[#F2FAFE] dark:hover:text-[#F2FAFE] transition-all duration-300">
+                    Home
+                    <span class="absolute bottom-[-2px] left-0 w-0 h-0.5 bg-[#03805E] dark:bg-[#FF6B81] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#projetos" class="nav-link relative text-gray-700 hover:text-[#03805E] dark:text-[#F2FAFE] dark:hover:text-[#F2FAFE] transition-all duration-300">
+                  Eixos Profissionalizantes
+                    <span class="absolute bottom-[-2px] left-0 w-0 h-0.5 bg-[#03805E] dark:bg-[#FF6B81] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#beneficios" class="nav-link relative text-gray-700 hover:text-[#03805E] dark:text-[#F2FAFE] dark:hover:text-[#F2FAFE] transition-all duration-300">
+                  Benefícios
+                    <span class="absolute bottom-[-2px] left-0 w-0 h-0.5 bg-[#03805E] dark:bg-[#FF6B81] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contato" class="nav-link relative text-gray-700 hover:text-[#03805E] dark:text-[#F2FAFE] dark:hover:text-[#F2FAFE] transition-all duration-300">
+                    Contato
+                    <span class="absolute bottom-[-2px] left-0 w-0 h-0.5 bg-[#DC143C] dark:bg-[#FF6B81] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+           
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300 flex items-center justify-center">
+                    <img id="theme-toggle-dark-icon" class="hidden w-5 h-5" src="lua.svg" alt="Modo escuro">
+                    <img id="theme-toggle-light-icon" class="hidden w-5 h-5" src="sol.svg" alt="Modo claro">
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container mx-auto px-4 pt-32 pb-12 bg-white dark:bg-[#1D3853]" >
+        <section id="inicio" class="flex flex-col md:flex-row items-center justify-between gap-12 mb-16 animate-slide-up w-auto">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+                  Formando Profissionais para o <span class="text-[#03805E] dark:text-[#03805E]">Futuro</span>
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 animate-fade-in">
+                  Na Maria Célia, capacitamos jovens em múltiplos eixos profissionais, preparando-os para os desafios do mercado de trabalho e do mundo acadêmico
+                </p>
+                <div class="flex flex-wrap gap-4 animate-fade-in">
+                    <button onclick="scrollToSection('projetos')" class="px-6 py-3 bg-[#1D3853] text-white rounded-lg font-medium hover:bg-[#1D3853] dark:bg-[#F49650] dark:hover:bg-[#F49650] transition-all duration-300 hover:scale-105">
+                      Conheça Nossos Eixos
+                    </button>
+                </div>
+            </div>
+           
+            <div class="md:w-1/2 flex justify-center animate-slide-up">
+                <div class="relative w-120 h-64 md:w-100 md:h-80 overflow-hidden dark:border-[#FF6B81] shadow-lg transition-all duration-500 hover:shadow-xl">
+                    <img src="escola.png" alt="" class="w-full h-full object-cover" style="border-radius: 16px;">
+                </div>
+            </div>
+        </section>
+<br><br>
+        <section id="projetos" class="mb-16 animate-fade-in">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">
+              Nossos Eixos de Formação Técnica
+            </h2>
+           
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-gray-800/50">
+                    <div class="">
+                        <img src="financas.jpg" alt="" class="w-full">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white bg-[#bg-gray-50] mb-2">Gestão e Negócios: Administração, Comércio e Finanças</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Formação voltada às práticas gerenciais, planejamento estratégico e gestão de recursos em diferentes setores do mercado.
+                        </p>
+                    </div>
+                </div>
+               
+                <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-gray-800/50">
+                    <div class="">
+                        <img src="ds.jpg" alt="" class="w-full" style="width: 680px; height: 360px">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2"> Informação e Comunicação: Desenvolvimento de Sistemas e Redes de Computadores.</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Capacitação em programação, gestão de dados, infraestrutura de redes e soluções tecnológicas para o mundo conectado.</p>
+                    </div>
+                </div>
+               
+                <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-all duration-500 hover:-translate-y-2 hover:[#F2FAFE] dark:hover:shadow-gray-800/50">
+                    <div class="">
+                        <img src="fruti.jpg" alt="" class="w-full">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Recursos Naturais: Agronegócio e Fruticultura.</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Foco em técnicas de produção agrícola, gestão de cadeias produtivas e práticas sustentáveis de cultivo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </main>
+
+    <section id="beneficios" class="bg-gray-50 dark:bg-[#1D3853] py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white text-center mb-12 md-20">
+              Por que Escolher a EEEP Professora Maria Célia Falcão?
+            </h2>
+           <br><br><br>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="max-w-sm p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="currentColor"><path d="M11 2C15.0675 2 18.426 5.03562 18.9337 8.96494L21.1842 12.5037C21.3324 12.7367 21.3025 13.0847 20.9593 13.2317L19 14.071V17C19 18.1046 18.1046 19 17 19H15.001L15 22H6L6.00025 18.3061C6.00033 17.1252 5.56351 16.0087 4.7555 15.0011C3.65707 13.6313 3 11.8924 3 10C3 5.58172 6.58172 2 11 2ZM10.4697 7.76256C9.78625 7.07915 8.67821 7.07915 7.9948 7.76256C7.31138 8.44598 7.31138 9.55402 7.9948 10.2374L11 13.2426L14.0052 10.2374C14.6886 9.55402 14.6886 8.44598 14.0052 7.76256C13.3218 7.07915 12.2137 7.07915 11.5303 7.76256L11 8.29289L10.4697 7.76256Z"></path></svg>
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 [#F2FAFE] dark:text-white">Infraestrutura Moderna:</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Laboratórios equipados para prática em áreas de TI, Gestão e Agroindústria.</p>
+                </div>
+               
+                <div class="max-w-sm p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="currentColor"><path d="M2 12H4V21H2V12ZM5 14H7V21H5V14ZM16 8H18V21H16V8ZM19 10H21V21H19V10ZM9 2H11V21H9V2ZM12 4H14V21H12V4Z"></path></svg>
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Suporte Acadêmico:</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Acompanhamento individualizado, reforço pedagógico e orientação profissional.</p>
+                </div>
+               
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="currentColor"><path d="M8.58579 17H3V15H21V17H15.4142L18.6569 20.2426L17.2426 21.6569L13 17.4142V20H11V17.4142L6.75736 21.6569L5.34315 20.2426L8.58579 17ZM5 3H19C19.5523 3 20 3.44772 20 4V14H4V4C4 3.44772 4.44772 3 5 3Z"></path></svg>
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Projetos Extracurriculares:</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Iniciação científica, feiras de empreendedorismo e atividades de extensão comunitária.</p>
+                </div>
+               
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="currentColor"><path d="M21 21H13V6C13 4.34315 14.3431 3 16 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21ZM11 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H8C9.65685 3 11 4.34315 11 6V21ZM11 21H13V23H11V21Z"></path></svg>
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Conexões Profissionais:</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Parcerias com empresas e universidades, possibilitando estágios e visitas técnicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 bg-[#F2FAFE] dark:bg-[#1D3853] animate-fade-in">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:[#1D3853]">
+          <span class="text-[#03805E] dark:text-[#F2FAFE]">Fale Conosco</span>
+        </h2>
+       
+        <div class="bg-gray-50 dark:bg-[#03805E] rounded-xl shadow-md p-8 md:p-10 transition-all duration-500 hover:shadow-lg">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="animate-slide-up">
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome Completo</label>
+                <input type="text" id="name" class="bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-[#DC143C] focus:border-[#DC143C] block w-full p-2.5 dark:placeholder-gray-400 transition-all duration-300 focus:scale-[1.02]" placeholder="Nome completo" required>
+              </div>
+              <div class="animate-slide-up">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-mail </label>
+                <input type="email" id="email" class="bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-[#DC143C] focus:border-[#DC143C] block w-full p-2.5 dark:placeholder-gray-400 transition-all duration-300 focus:scale-[1.02]" placeholder="seu@email.com" required>
+              </div>
+            </div>
+            <div class="animate-slide-up">
+              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mensagem</label>
+              <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-600 rounded-lg border border-gray-300 dark:border-gray-500 focus:ring-[#DC143C] focus:border-[#DC143C] dark:placeholder-gray-400 transition-all duration-300 focus:scale-[1.02]" placeholder="Escreva sua mensagem aqui..."></textarea>
+            </div>
+            <div class="animate-slide-up">
+            </div>
+            <button type="submit" class="w-full md:w-auto px-10 py-3 text-center bg-[#F49650] dark:bg-[#F49650] text-white rounded-lg font-medium hover:bg-[#F49650] dark:hover:bg-[#F49650] transition-all duration-300 hover:scale-105 animate-fade-in">
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#F2FAFE] dark:bg-[#1D3853] border-t border-gray-200 dark:border-gray-700 py-8" style="display: flex; align-content: center;">
+      <div class="max-w-7xl mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4 justify-center ">
+              <div class="flex items-center gap-3">
+                  <img src="logo.svg" class="h-8 w-8" alt="Microsoft Logo">
+                  <span class="text-sm text-gray-500 dark:text-[#F2FAFE]" style="display: flex; align-content: center  ;">
+                    © 2024 EEEP Professora Maria Célia Falcão. Todos os direitos reservados.
+                  </span>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+            const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+           
+            if (localStorage.getItem('color-theme') === 'dark' ||
+                (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                themeToggleLightIcon.classList.remove('hidden');
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeToggleDarkIcon.classList.remove('hidden');
+            }
+           
+            themeToggleBtn.addEventListener('click', function() {
+                themeToggleDarkIcon.classList.toggle('hidden');
+                themeToggleLightIcon.classList.toggle('hidden');
+               
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            });
+
+
+            let lastScroll = 0;
+            const navbar = document.querySelector('header');
+           
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+               
+                if (currentScroll <= 0) {
+                    navbar.classList.remove('scrolled');
+                    return;
+                }
+               
+                if (currentScroll > lastScroll) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+               
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
+
+
+    <style>
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</body>
+</html>
+
+
+
